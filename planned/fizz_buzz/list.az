@@ -1,0 +1,21 @@
+using system.collections;
+
+/// A basic version of fizz buzz that returns a list
+public fn fizz_buzz_list(up_to: uint) -> iso List[string]
+{
+    let lines = new List[string]();
+    foreach n in 1..up_to
+    {
+        let fizz = n.remainder(3) == 0;
+        let buzz = n.remainder(5) == 0;
+        if fizz and buzz
+            { lines.add("FizzBuzz"); }
+        else if fizz
+            { lines.add("Fizz"); }
+        else if buzz
+            { lines.add("Buzz"); }
+        else
+            { lines.add(n.display_format()); }
+    }
+    return lines;
+}

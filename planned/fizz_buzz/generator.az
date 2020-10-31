@@ -1,0 +1,19 @@
+using system.collections;
+
+public fn fizz_buzz_generator(up_to: uint) -> iso Iterator[string]
+{
+    foreach n in 1..up_to
+    {
+        let fizz = n.remainder(3) == 0;
+        let buzz = n.remainder(5) == 0;
+        if fizz and buzz
+            { yield "FizzBuzz"; }
+        else if fizz
+            { yield "Fizz"; }
+        else if buzz
+            { yield "Buzz"; }
+        else
+            { yield n.to_display_string(); }
+    }
+    return lines;
+}

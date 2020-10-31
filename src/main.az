@@ -1,0 +1,26 @@
+public fn main(console: Console)
+{
+    console.write_line("FizzBuzz (Minimal):");
+    fizz_buzz_minimal(100, console);
+    console.write_line();
+
+    // console.write_line("FizzBuzz (Basic):");
+    // write_lines(console, fizz_buzz_basic(100));
+    // console.write_line();
+
+    // console.write_line("FizzBuzz (Generator):");
+    // write_lines(console, fizz_buzz_generator(100));
+    // console.write_line();
+
+    // console.write_line("FizzBuzz (Query):");
+    // write_lines(console, fizz_buzz_query(100));
+    // console.write_line();
+
+    // console.write_line("FizzBuzz (Composed):");
+    // write_lines(console, fizz_buzz_composed(100));
+    // console.write_line();
+
+    // console.write_line("FizzBuzz (Lazy):");
+    // write_lines(console, fizz_buzz_lazy().take(100));
+    // console.write_line();
+}

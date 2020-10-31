@@ -1,0 +1,22 @@
+/// This minimal version of fizz buzz was designed to use as few language and
+/// standard library features as possible to make compiling it as easy as possible.
+public fn fizz_buzz_minimal(up_to: uint, console: mut Console)
+{
+    var n: uint = 1;
+    loop
+    {
+        let fizz = n.remainder(3) == 0;
+        let buzz = n.remainder(5) == 0;
+        if fizz and buzz
+            { console.write_line("FizzBuzz"); }
+        else if fizz
+            { console.write_line("Fizz"); }
+        else if buzz
+            { console.write_line("Buzz"); }
+        else
+            { console.write_line(n.to_display_string()); }
+
+        n += 1;
+        if n > up_to => break;
+    }
+}

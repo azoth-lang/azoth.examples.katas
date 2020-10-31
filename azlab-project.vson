@@ -1,0 +1,10 @@
+{
+    "name": "azoth.examples.katas",
+    "root_namespace": "azoth.examples.katas",
+    "authors": ["Jeff Walker"],
+    "template": "app",
+    "dependencies":
+    {
+        "azoth.stdlib": { "path": "../azoth.stdlib", "trusted": true }
+    }
+}

@@ -1,0 +1,19 @@
+using system.collections;
+
+/// A basic version of fizz buzz
+public fn fizz_buzz_basic(up_to: uint, console: mut Console)
+{
+    foreach n in 1..up_to
+    {
+        let fizz = n.remainder(3) == 0;
+        let buzz = n.remainder(5) == 0;
+        if fizz and buzz
+            { console.write_line("FizzBuzz"); }
+        else if fizz
+            { console.write_line("Fizz"); }
+        else if buzz
+            { console.write_line("Buzz"); }
+        else
+            { console.write_line(n.to_display_string()); }
+    }
+}

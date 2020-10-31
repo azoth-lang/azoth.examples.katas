@@ -1,0 +1,10 @@
+using system;
+using system.console;
+
+fn write_lines(console: mut Console, lines: mut Iterator[string])
+{
+    foreach line in lines
+    {
+        console.write_line(line);
+    }
+}

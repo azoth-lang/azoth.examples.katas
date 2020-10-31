@@ -1,0 +1,12 @@
+using system.collections;
+
+public fn fizz_buzz_lazy() -> iso Iterator[string]
+{
+    let fizzes = #[none, none, "Fizz"].\repeat();
+    let buzzes = #[none, none, none, none, "Buzz"].\repeat();
+    let words = fizzes.zip(buzzes, \+);
+    let numbers = (1..).map(string.to_display_string);
+    let choice = max;
+    let fizzBuzz = words.zip(numbers, choice);
+    return fizzBuzz;
+}

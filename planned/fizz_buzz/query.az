@@ -1,0 +1,18 @@
+using system.collections;
+
+public fn fizz_buzz_query(up_to: uint) -> iso Iterator[string]
+{
+    const fizz_buzz = fn(n)
+    {
+        let fizz = n.remainder(3) == 0;
+        let buzz = n.remainder(5) == 0;
+        return if fizz and buzz => "FizzBuzz"
+            else if fizz => "Fizz"
+            else if buzz => "Buzz"
+            else => n.to_display_string();
+    };
+
+    return (1..up_to).map(fizz_buzz);
+}
+
+
