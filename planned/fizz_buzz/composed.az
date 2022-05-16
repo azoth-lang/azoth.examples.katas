@@ -1,14 +1,16 @@
 using system.collections;
 
+// A version of fizz buzz that makes heavy use of functional composition
 public fn fizz_buzz_composed(up_to: uint) -> iso List[string]
 {
     let lines = new List();
+    let test = fn(d, s, x) => if n.remainder(d) == 0 => (fn(_) => s + x("")) else => x;
+    let fizz = fn(x) => test(3, "Fizz", x);
+    let buzz = fn(x) => test(5, "Buzz", x);
+    let fizzBuzz = fizz(buzz(identity));
     foreach n in 1..up_to
     {
-        let test = fn(d, s, x) => if n.remainder(d) == 0 => (fn(_) => s + x("")) else => x;
-        let fizz = fn(x) => test(3, "Fizz", x);
-        let buzz = fn(x) => test(5, "Buzz", x);
-        lines.add(fizz(buzz(identity))(n.to_display_string()));
+        lines.add(fizzBuzz(n.to_display_string()));
     }
     return lines;
 }

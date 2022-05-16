@@ -1,5 +1,6 @@
 using system.collections;
 
+/// A version of fizz buzz that gives a lazy infinate iterator
 public fn fizz_buzz_lazy() -> iso Iterator[string]
 {
     let fizzes = #[none, none, "Fizz"].\repeat();
