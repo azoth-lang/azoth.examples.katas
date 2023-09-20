@@ -15,5 +15,3 @@ public fn fizz_buzz_query(up_to: uint) -> iso Iterator[string]
 
     return (1..up_to).map(fizz_buzz);
 }
-
-

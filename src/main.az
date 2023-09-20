@@ -1,4 +1,4 @@
-public fn main(console: Console)
+public fn main(console: mut Console)
 {
     console.write_line("FizzBuzz (Minimal):");
     fizz_buzz_minimal(100, console);
