@@ -1,5 +1,3 @@
-using system.collections;
-
 /// A basic version of fizz buzz
 public fn fizz_buzz_basic(up_to: uint, console: mut Console)
 {

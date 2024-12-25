@@ -5,6 +5,6 @@
     "template": "app",
     "dependencies":
     {
-        "azoth.stdlib": { "path": "../azoth.stdlib", "trusted": true }
+        "azoth.standard_library": { "path": "../azoth.libs/standard_library", "trusted": true }
     }
 }
